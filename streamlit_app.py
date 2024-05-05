@@ -1,11 +1,7 @@
 import streamlit as st
 from langchain.llms import Ollama
-import subprocess
 
-# Running your shell script
-subprocess.run(["bash", "setup.sh"])
-
-st.title("Hello")
+st.title("Chat with Me")
 
 def reponse_generator(prompt):
     llm = Ollama(model="dolphin-mistral", temperature=0.7, stop=["AI: "])
